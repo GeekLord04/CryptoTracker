@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    android:background="@drawable/crypto_background"
+    android:orientation="horizontal"
+    android:alpha="0.6"
+    android:elevation="5dp"
+    android:padding="16dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_coin"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="2dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/Rounded_Corner"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_name"
+            android:fontFamily="@font/poppins"
+            android:text="BitCoin"
+            android:textColor="#C499F3"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rate"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#F2AFEF"
+            android:text="$23"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+</LinearLayout>
