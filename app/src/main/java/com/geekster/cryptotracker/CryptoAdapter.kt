@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.geekster.cryptotracker.databinding.ListItemBinding
 import com.geekster.cryptotracker.model.Crypto
-import com.geekster.cryptotracker.utils.Constants.TAG
 
 class CryptoAdapter(private var cryptoList: List<Pair<String, Pair<Double, Crypto?>>>) :
     RecyclerView.Adapter<CryptoAdapter.CryptoViewHolder>() {
@@ -41,8 +40,8 @@ class CryptoAdapter(private var cryptoList: List<Pair<String, Pair<Double, Crypt
                 binding.titleName.text = it.name_full
                 Glide.with(itemView.context)
                     .load(it.icon_url)
-                    .placeholder(R.drawable.loading_gif) // Placeholder if the image is loading
-                    .error(R.drawable.error_gif) // Placeholder if there is an error loading the image
+                    .placeholder(R.drawable.loading_gif)
+                    .error(R.drawable.error_gif)
                     .into(binding.imageCoin)
             }
         }

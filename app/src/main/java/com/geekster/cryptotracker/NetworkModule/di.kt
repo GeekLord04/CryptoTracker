@@ -1,6 +1,6 @@
 package com.geekster.cryptotracker.NetworkModule
 
-//import com.geekster.cryptotracker.api.apiMethod
+
 import com.geekster.cryptotracker.api.CoinLayerService
 import com.geekster.cryptotracker.utils.Constants.BASE_URL
 import dagger.Module

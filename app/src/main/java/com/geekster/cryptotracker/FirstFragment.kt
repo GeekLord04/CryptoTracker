@@ -28,10 +28,6 @@ class FirstFragment : Fragment() {
     private var _binding : FragmentFirstBinding? = null
     private val binding get() = _binding!!
 
-    private val coroutineScope = CoroutineScope(Dispatchers.Main)
-
-    private val cryptoViewModel by viewModels<CryptoViewModel>()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

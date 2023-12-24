@@ -12,38 +12,6 @@ import javax.inject.Inject
 
 class CryptoRepository @Inject constructor(private val service : CoinLayerService) {
 
-//    fun fetchRates(callback: (RatesResponse?) -> Unit) {
-//        service.getRates().enqueue(object : Callback<RatesResponse> {
-//            override fun onResponse(call: Call<RatesResponse>, response: Response<RatesResponse>) {
-//                if (response.isSuccessful) {
-//                    callback(response.body())
-//                } else {
-//                    callback(null)
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<RatesResponse>, t: Throwable) {
-//                callback(null)
-//            }
-//        })
-//    }
-//
-//    fun fetchCryptoInfo(symbol: String, callback: (CryptoResponse?) -> Unit) {
-//        service.getCryptoInfo().enqueue(object : Callback<CryptoResponse> {
-//            override fun onResponse(call: Call<CryptoResponse>, response: Response<CryptoResponse>) {
-//                if (response.isSuccessful) {
-//                    callback(response.body())
-//                } else {
-//                    callback(null)
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<CryptoResponse>, t: Throwable) {
-//                callback(null)
-//            }
-//        })
-//    }
-
     val cachedCryptoData = mutableMapOf<String, Pair<Double, Crypto?>>()
 
     suspend fun fetchRates(callback: (RatesResponse?) -> Unit) {
