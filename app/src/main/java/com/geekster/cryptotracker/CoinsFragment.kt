@@ -26,14 +26,11 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class CoinsFragment : Fragment() {
 
     private var _binding : FragmentCoinsBinding? = null
     private val binding get() = _binding!!
-
-    private val coroutineScope = CoroutineScope(Dispatchers.Main)
 
     private lateinit var cryptoAdapter: CryptoAdapter
 
@@ -43,7 +40,7 @@ class CoinsFragment : Fragment() {
     private val handler = Handler(Looper.getMainLooper())
     private val fetchCryptoDataRunnable = object : Runnable {
         override fun run() {
-            lifecycleScope.launch(Dispatchers.IO) {
+            lifecycleScope.launch(Dispatchers.Main) {
                 val currentTime = System.currentTimeMillis()
                 Log.d(TAG, "Fetching crypto data at ${getTimeString(currentTime)}")
                 cryptoViewModel.fetchCryptoData()
@@ -89,7 +86,7 @@ class CoinsFragment : Fragment() {
         observeCrypto()
 
         binding.swipeRefresh.setOnRefreshListener {
-            lifecycleScope.launch(Dispatchers.IO) {
+            lifecycleScope.launch(Dispatchers.Main) {
                 //new
                 val currentTime = System.currentTimeMillis()
                 Log.d("Time", "Fetching crypto data at ${getTimeString(currentTime)}")
@@ -98,7 +95,7 @@ class CoinsFragment : Fragment() {
             }
 
         }
-        lifecycleScope.launch(Dispatchers.IO) {
+        lifecycleScope.launch(Dispatchers.Main) {
             //new
             val currentTime = System.currentTimeMillis()
             Log.d("Time", "Fetching crypto data at ${getTimeString(currentTime)}")
