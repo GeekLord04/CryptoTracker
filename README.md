@@ -5,7 +5,7 @@ CryptoTracker is an Android application that allows users to track cryptocurrenc
 
 
 ## Features
-- View live cryptocurrency rates in multiple currencies.
+- View live cryptocurrency rates
 - Display detailed information about each cryptocurrency, including symbol, name, and current value.
 - Swipe-to-refresh functionality for updating the data.
 - Update data after 3 mins.
